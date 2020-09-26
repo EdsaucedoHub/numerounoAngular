@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Holamundo2</h1>
+
+            <div *ngIf="mostrar" class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active">
+                  {{persona.nombre}}
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">{{persona.apellido}}</a>
+            </div>
+            <a (click)="mostrar = !mostrar" class="btn btn-primary btn-block" tabindex="-1" role="button" aria-disabled="true">Enviar</a>
+
+        </div>
+        <div class="col">
+            <h1>Hola Mundo</h1>
+            <ul class="list-group">
+                <li *ngFor=" let personajes of personajes; let i = index" class="list-group-item">
+                    {{i}} {{personajes}}
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
